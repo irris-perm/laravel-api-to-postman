@@ -168,7 +168,7 @@ class RouteProcessor
 
                 if ($method === 'GET') {
                     return $collection->put('url', [
-                        'query' => $rules->map(fn ($value) => array_merge($value, ['disabled' => false])),
+                        'query' => $rules->map(fn ($value) => array_merge($value, ['disabled' => true])),
                     ]);
                 }
 
